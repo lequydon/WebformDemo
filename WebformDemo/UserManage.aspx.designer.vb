@@ -23,6 +23,15 @@ Partial Public Class UserManage
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
+    '''lblresult control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblresult As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''lblmsg control.
     '''</summary>
     '''<remarks>
