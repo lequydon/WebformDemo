@@ -39,22 +39,15 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="container-fluid" style="display:flex; align-items:center;justify-content:space-between">
+                    <div class="Title"><a class="navbar-brand" runat="server" href="~/">Application name</a></div>
+                    <div class="link_button">
+                         <a runat="server" href="~/">Home</a>
+                        <a runat="server" href="~/About">About</a>
+                        <a runat="server" href="~/Contact">Contact</a>
+                        <a runat="server" href="~/UserManage">User Manage</a>
+                    </div>
+                    <div class="logout_boutton"><asp:ImageButton ID="ImageButton1" runat="server" Height="20px" ImageUrl="~/Images/logout.png" Width="28px" /></div>
             </div>
         </div>
         <div class="container body-content">

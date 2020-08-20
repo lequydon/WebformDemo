@@ -10,7 +10,7 @@
         userObj.Password = password.Text
         Dim checkLogin As New UserService
         If checkLogin.GetUser(userObj).Email IsNot Nothing Then
-            Dim tkt As New FormsAuthenticationTicket(1, email.Text, DateTime.Now, DateTime.Now.AddMinutes(30), chkPersistCookie.Checked, "your custom data")
+            Dim tkt As New FormsAuthenticationTicket(1, email.Text, DateTime.Now, DateTime.Now.AddMinutes(30), chkPersistCookie.Checked, checkLogin.GetUser(userObj).Role)
             Dim cookiestr As String
             Dim ck As HttpCookie
             cookiestr = FormsAuthentication.Encrypt(tkt)

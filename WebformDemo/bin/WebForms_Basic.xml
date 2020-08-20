@@ -82,9 +82,36 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:WebformDemo.SiteMaster._ImageButton1">
+<summary>
+ImageButton1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:WebformDemo.SiteMaster._MainContent">
 <summary>
 MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WebformDemo.UserManage._GridView1">
+<summary>
+GridView1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:WebformDemo.UserManage._lblmsg">
+<summary>
+lblmsg control.
 </summary>
 <remarks>
 Auto-generated field.

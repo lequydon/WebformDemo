@@ -11,23 +11,23 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class SiteMaster
+Partial Public Class UserManage
 
     '''<summary>
-    '''ImageButton1 control.
+    '''GridView1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ImageButton1 As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''MainContent control.
+    '''lblmsg control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents lblmsg As Global.System.Web.UI.WebControls.Label
 End Class
