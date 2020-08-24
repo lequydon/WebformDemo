@@ -54,4 +54,39 @@ Public Class UserService
         con.Close() 'đóng kết nối sau khi sử dụng
         Return data
     End Function
+
+    Public Function DeleteUser(id As String) As Boolean Implements IUser.DeleteUser
+        Dim rowsAffected As Integer = 0
+        Dim con As New SqlConnection(connectionString)
+        con.Open()   'Mở kết nối
+        'Code truy vấn, cập nhật dữ dữ liệu ở đây
+        Dim cmd = New SqlCommand()
+        cmd.CommandText = "delete [user] where [user].id=@id"
+        cmd.CommandType = System.Data.CommandType.Text
+        cmd.Connection = con
+        cmd.Parameters.Add(New SqlParameter("@id", id))
+        rowsAffected = Int(cmd.ExecuteNonQuery())
+        con.Close() 'đóng kết nối sau khi sử dụng
+        Return rowsAffected
+    End Function
+
+    Public Function UpdateUser(user As User) As User Implements IUser.UpdateUser
+        Dim rowID As Integer = 0
+        Dim con As New SqlConnection(connectionString)
+        con.Open()   'Mở kết nối
+        'Code truy vấn, cập nhật dữ dữ liệu ở đây
+        Dim cmd = New SqlCommand()
+        cmd.CommandText = "update [user] set email=@email,role=@role,sdt=@sdt,hoten=@hoten,namsinh=@namsinh where id=@id select @@IDENTITY"
+        cmd.CommandType = System.Data.CommandType.Text
+        cmd.Connection = con
+        cmd.Parameters.Add(New SqlParameter("@id", user.Id))
+        cmd.Parameters.Add(New SqlParameter("@email", user.Email))
+        cmd.Parameters.Add(New SqlParameter("@role", user.Role))
+        cmd.Parameters.Add(New SqlParameter("@sdt", user.Sdt))
+        cmd.Parameters.Add(New SqlParameter("@hoten", user.Hoten))
+        cmd.Parameters.Add(New SqlParameter("@namsinh", user.Namsinh))
+        cmd.ExecuteScalar()
+        con.Close() 'đóng kết nối sau khi sử dụng
+        Return user
+    End Function
 End Class

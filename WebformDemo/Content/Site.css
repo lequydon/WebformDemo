@@ -1,15 +1,18 @@
-﻿.link_button a{
-    font-size:18px;
-    margin-right:10px;
-    text-decoration:none;
-    color:white !important
+﻿.link_button a {
+    font-size: 18px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white !important
+}
 
+.Title a {
+    color: white !important
 }
-.Title a{
-    color:white !important
-}
+
 .manage_table {
     margin-top: 60px;
     display: flex;
     justify-content: center;
 }
+
+

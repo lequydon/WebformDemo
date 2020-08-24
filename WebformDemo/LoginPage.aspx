@@ -6,24 +6,24 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
-    <h1 style="text-align:center">Login page</h1>
-    <form id="form1" runat="server" style="width:40%;margin:0 auto">
-        <div>
-            <label>Email:</label>
-            <div class="email" style="margin-bottom:20px">
-                <asp:TextBox ID="email" runat="server" Width="100%" Height="29px"></asp:TextBox>
+<body style="background-color:darkgray">
+    <div class="login_content" style="position:absolute;left:50%;top:40%;transform: translateX(-50%) translateY(-50%);width:50%;padding:20px;border-radius:5px;background-color:white">
+        <h1 style="text-align: center">Login</h1>
+        <form id="form1" runat="server" style="width: 40%; margin: 0 auto">
+            <div>
+                <div class="email" style="margin-bottom: 20px">
+                    <asp:TextBox ID="email" runat="server" Width="100%" Height="29px" placeholder="Email"></asp:TextBox>
+                </div>
+                <div class="password">
+                    <asp:TextBox ID="password" runat="server" Width="100%" TextMode="Password" placeholder="Password" Height="27px"></asp:TextBox>
+                </div>
             </div>
-            <label>Password:</label>
-            <div class="password">
-                <asp:TextBox ID="password" runat="server" Width="100%" TextMode="Password" Height="27px"></asp:TextBox>
+           <asp:CheckBox ID="chkPersistCookie" runat="server" AutoPostBack="false" />
+            <label>Persistent Cookie</label>
+            <div style="text-align: center">
+                <asp:Button ID="Button1" runat="server" Text="Login" Width="89px" BackColor="#333333" BorderColor="Yellow" BorderStyle="None" ForeColor="White" Height="25px" />
             </div>
-        </div>
-        <label>Persistent Cookie:</label>
-        <div><ASP:CheckBox id="chkPersistCookie" runat="server" autopostback="false" /></div>
-        <div style="text-align:center">
-            <asp:Button ID="Button1" runat="server" Text="Login" Width="89px" BackColor="#339933" BorderColor="Yellow" BorderStyle="None" ForeColor="Black" Height="25px" />
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 </html>

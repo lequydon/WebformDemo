@@ -4,16 +4,18 @@
     <section class="manage_table">
         <div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="951px" 
-                DataKeyNames="Id" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
+                DataKeyNames="Id" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating
+                " >
                 <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="ID" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" />
+                    <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" />
+                    <asp:BoundField DataField="Email" HeaderText="Email"  />
                     <asp:BoundField DataField="Role" HeaderText="Role" />
                     <asp:BoundField DataField="Sdt" HeaderText="Sdt" />
                     <asp:BoundField DataField="Hoten" HeaderText="Họ tên" />
-                    <asp:BoundField DataField="Namsinh" HeaderText="Năm sinh" />
+                    <asp:BoundField DataField="Namsinh" HeaderText="Năm sinh" DataFormatString="{0:d}" />
                     <asp:CommandField ShowEditButton="true" />
                     <asp:CommandField ShowDeleteButton="true" />
+                    
                 </Columns>
                 <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                 <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
